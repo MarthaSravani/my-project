@@ -1,0 +1,4 @@
+In this experiment, we created a Student Registration Form using HTML and CSS.
+The form has three fields: Name, Email, and Age. We used HTML5 validation to make sure the user fills in all the details correctly before submitting.
+We also added some CSS styling to make the form look neat and easy to use.
+This experiment helped us learn how to build basic forms, check user inputs, and improve the design with simple CSS.
