@@ -1,0 +1,79 @@
+ADMIN DASHBOARD USING CSS GRID & THEME SWITCHING
+
+1. LAYOUT STRUCTURE
+
+Sections Included:
+
+Header: Displays the title "Admin Dashboard" along with a theme switch toggle (Light/Dark mode).
+
+Sidebar: Contains navigation links – Home, Users, Settings.
+
+Main Content: Displays a personalized welcome message like "Welcome, Admin!" with placeholder text for reports or updates.
+
+Footer: Contains the text © 2025 Admin Panel at the bottom.
+
+2. FUNCTIONALITY
+
+CSS Grid Layout:
+
+Entire dashboard layout (header, sidebar, content, footer) is structured using display: grid with responsive columns and rows.
+
+Achieves clean separation of sections and consistent spacing.
+
+Theme Switching:
+
+A toggle switch allows switching between Light Mode and Dark Mode dynamically.
+
+Uses JavaScript to switch CSS classes and apply different background and text colors.
+
+Light Mode: White background, dark text, green header/footer.
+
+Dark Mode: Dark background, white text, gray sidebar.
+3. VALID OUTPUT BEHAVIOR
+
+VALID STATES:
+
+Light mode displays:
+
+Green header/footer, white background, black text.
+
+Dark mode displays:
+
+Dark background, white text, gray sidebar, consistent layout.
+
+INVALID STATES:
+
+N/A – Theme switching handled via JavaScript ensures proper behavior. Layout does not break due to invalid input.
+
+4. CSS STYLING BREAKDOWN
+
+ELEMENT: body
+
+background-color: Changes dynamically based on theme.
+
+font-family: Clean, readable sans-serif font.
+
+ELEMENT: .dashboard-grid
+
+display: grid: Defines main grid structure.
+
+grid-template-areas: Specifies header, sidebar, content, footer areas.
+
+ELEMENT: .header, .sidebar, .content, .footer
+
+Each section styled with proper padding, margin, and background color.
+
+Footer and header have distinct colors for visual separation.
+
+ELEMENT: .theme-toggle
+
+Styles the theme toggle button using custom switch UI.
+
+LEARNING OUTCOMES
+
+Learned how to design a dashboard layout using CSS Grid.
+
+Implemented real-time theme switching using JavaScript and CSS.
+
+Practiced creating responsive UI components with clear separation of concerns.
+
