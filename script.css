@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="https://marthasravani.github.io/my-project/style.css">
-<!--   <link rel="stylesheet" href="style.css"> -->
-<style>
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
   --header-footer-bg: #4CAF50;
   --sidebar-bg: #f4f4f4;
-  --main-bg: #e8eaf5;
+  --main-bg: #e8f5e9;
 }
 
 /* Dark Mode Overrides */
@@ -119,39 +111,3 @@ body, html {
 #theme-toggle:checked ~ .dashboard .dark-label {
   display: inline;
 }
-
-  
-</style>  
-  
-</head>
-<body>
-  <input type="checkbox" id="theme-toggle">
-  
-  <div class="dashboard">
-    <header class="header">
-      <h1>Admin Dashboard</h1>
-      <label for="theme-toggle" class="theme-switch">
-        <span class="light-label">Light Mode</span>
-        <span class="dark-label">Dark Mode</span>
-      </label>
-    </header>
-
-    <aside class="sidebar">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Users</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </aside>
-
-    <main class="main-content">
-      <h2>Welcome, Admin!</h2>
-      <p>This is the main content area. You can add charts, tables, or reports here.</p>
-    </main>
-
-    <footer class="footer">
-      <p>© 2025 Admin Panel</p>
-    </footer>
-  </div>
-</body>
-</html>
