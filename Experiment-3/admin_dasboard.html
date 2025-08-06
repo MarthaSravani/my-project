@@ -3,7 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://marthasravani.github.io/my-project/style.css">
+<!--   <link rel="stylesheet" href="style.css"> -->
+<style>
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-footer-bg: #4CAF50;
+  --sidebar-bg: #f4f4f4;
+  --main-bg: #e8eaf5;
+}
+
+/* Dark Mode Overrides */
+#theme-toggle:checked ~ .dashboard {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --header-footer-bg: #333333;
+  --sidebar-bg: #2c2c2c;
+  --main-bg: #1e1e1e;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#theme-toggle {
+  display: none;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  background-color: var(--header-footer-bg);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Main */
+.main-content {
+  grid-area: main;
+  background-color: var(--main-bg);
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  background-color: var(--header-footer-bg);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Theme Toggle Label Styling */
+.theme-switch {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Show/hide based on checked state */
+.light-label {
+  display: inline;
+}
+.dark-label {
+  display: none;
+}
+
+#theme-toggle:checked ~ .dashboard .light-label {
+  display: none;
+}
+#theme-toggle:checked ~ .dashboard .dark-label {
+  display: inline;
+}
+
+  
+</style>  
+  
 </head>
 <body>
   <input type="checkbox" id="theme-toggle">
