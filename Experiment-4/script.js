@@ -1,5 +1,5 @@
-const textInput = document.getElementById("textInput");
-const charCount = document.getElementById("charCount");
+const textInput = document.getElementById("text-input");
+const charCount = document.getElementById("char-count");
 
 textInput.addEventListener("input", () => {
   charCount.textContent = textInput.value.length;
