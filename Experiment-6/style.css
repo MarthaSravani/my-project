@@ -1,0 +1,45 @@
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, Arial, sans-serif;
+  margin: 0; padding: 24px;
+  background: #f5f7fb; color: #1f2a44;
+}
+.wrap { max-width: 960px; margin: 0 auto; }
+h1 { margin: 0 0 16px; }
+
+.toolbar {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  align-items: center; padding: 12px 16px;
+  background: #fff; border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  margin-bottom: 16px;
+}
+.group { display: flex; align-items: center; gap: 8px; }
+label { font-weight: 600; }
+input[type="range"] { width: 140px; }
+button {
+  padding: 8px 14px; border: 0; border-radius: 10px;
+  background: #1e88e5; color: #fff; cursor: pointer;
+  font-weight: 600; box-shadow: 0 2px 8px rgba(30,136,229,.25);
+}
+button:hover { filter: brightness(1.05); }
+button.danger { background: #e53935; box-shadow: 0 2px 8px rgba(229,57,53,.25); }
+
+.canvasShell {
+  background: #fff; border-radius: 12px; padding: 12px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.08);
+}
+#board {
+  width: 100%; height: clamp(300px, 55vh, 520px);
+  border: 2px solid #cfd8dc; border-radius: 8px;
+  background: linear-gradient(#fafcff, #f7fbff);
+}
+
+/* Drawn shapes default look (overridden inline) */
+.path-stroke, .shape-stroke {
+  fill: none; stroke-linecap: round; stroke-linejoin: round;
+}
+
+.hint {
+  position: absolute; opacity: .7; pointer-events: none;
+}

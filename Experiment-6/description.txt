@@ -1,0 +1,74 @@
+INTERACTIVE SVG DRAWING TOOL – TEST CASES & VALIDATIONS
+1. EVENT: Mouse Down (Starting Point of Drawing)
+Requirement: User must press and hold the mouse inside the SVG canvas to start drawing.
+VALID INPUTS:
+
+Clicking inside the SVG area → Drawing begins at that coordinate.
+INVALID INPUTS:
+
+Clicking outside the SVG area → No drawing should start.
+
+Not pressing the mouse button → No shape should be drawn.
+
+2. EVENT: Mouse Move (While Drawing)
+Requirement: Shape (line/path) must follow the mouse movement dynamically.
+VALID INPUTS:
+
+Dragging mouse inside canvas → Line/path updates in real time.
+INVALID INPUTS:
+
+Moving mouse without holding click → Should not create any shape.
+
+Moving outside the canvas during draw → Line should stop at boundary.
+
+3. EVENT: Mouse Up (Ending Point of Drawing)
+Requirement: Drawing must stop when mouse button is released.
+VALID INPUTS:
+
+Releasing mouse inside canvas → Shape completes successfully.
+INVALID INPUTS:
+
+Releasing mouse outside canvas → Should terminate drawing without errors.
+
+4. MULTIPLE SHAPES CREATION
+Requirement: User should be able to draw multiple shapes sequentially without reloading the page.
+VALID INPUTS:
+
+Clicking-dragging-releasing multiple times → Multiple lines/paths drawn.
+INVALID INPUTS:
+
+Page reload required for new shape → ❌ Incorrect behavior.
+
+CSS Styling Breakdown
+1. ELEMENT: body (Page Background)
+Purpose: Provides background and centers drawing area.
+
+background-color: light shade → Clean workspace.
+
+margin & padding → Centers canvas on page.
+
+2. ELEMENT: .drawing-container (Canvas Wrapper)
+Purpose: Styles the drawing area wrapper.
+
+border: 2px solid → Defines clear boundary.
+
+margin: auto → Centers horizontally.
+
+3. ELEMENT: svg (Drawing Canvas)
+Purpose: Main drawing area.
+
+width & height → Sets fixed drawing space.
+
+background-color: #fff → White canvas look.
+
+cursor: crosshair → Indicates drawing tool.
+
+LEARNING OUTCOMES
+Learnt how to use SVG as a drawing canvas in web development.
+
+Understood JavaScript mouse event handling (mousedown, mousemove, mouseup).
+
+Implemented real-time DOM manipulation for drawing shapes dynamically.
+
+Gained practical experience in creating an interactive tool without page reload.
+
